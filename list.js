@@ -20,10 +20,7 @@ document.querySelector('#delete-all').addEventListener('click', () => {
 
 class List {
   constructor() {
-    this.list = JSON.parse(localStorage.getItem('todolist'));
-    if (!this.list) {
-      this.list = [];
-    }
+   this.list = JSON.parse(localStorage.getItem('todolist')) || [];
     this.display();
   }
 
